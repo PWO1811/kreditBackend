@@ -25,17 +25,11 @@ public class Client {
     @Column(name = "created_at", updatable = false)
     @CreationTimestamp
     private LocalDateTime createdAt;
-
-    // Обязательный конструктор без аргументов
     public Client() {
     }
-
-    // Конструктор с параметром
     public Client(String data) {
         this.data = data;
     }
-
-    // Геттеры и сеттеры
     public Long getId() {
         return id;
     }
@@ -47,8 +41,6 @@ public class Client {
     public void setData(String data) {
         this.data = data;
     }
-
-    // Метод для получения passportNumber из JSON
     public String getPassportNumber() {
         try {
             JsonNode root = new ObjectMapper().readTree(data);

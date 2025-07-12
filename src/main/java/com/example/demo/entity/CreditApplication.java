@@ -12,10 +12,10 @@ public class CreditApplication {
     private Long id;
 
     @Column(nullable = false)
-    private double amount;  // Сумма кредита
+    private double amount;  
 
     @Column(nullable = false)
-    private int term;  // Срок в месяцах
+    private int term;  
 
     @Column(nullable = false)
     private String status;
@@ -26,11 +26,9 @@ public class CreditApplication {
     @Column(nullable = false)
     private LocalDate birthDate;
 
-    @ManyToOne  // Многие заявки → одному клиенту
-    @JoinColumn(name = "client_id", nullable = false)  // Внешний ключ
-    private Client client;  // Ссылка на клиента
-
-    // Конструкторы
+    @ManyToOne  
+    @JoinColumn(name = "client_id", nullable = false)  
+    private Client client;  
     public CreditApplication() {
     }
 
@@ -42,8 +40,6 @@ public class CreditApplication {
         this.birthDate = birthDate;
         this.fullName = fullName;
     }
-
-    // Геттеры и сеттеры
     public Long getId() {
         return id;
     }

@@ -19,17 +19,13 @@ public class CreditForm {
 
     @JdbcTypeCode(SqlTypes.JSON)
     @Column(columnDefinition = "jsonb", nullable = false)
-    private String data;  // JSON-строка с данными анкеты
-
-    // Конструкторы
+    private String data;  
     public CreditForm() {}
 
     public CreditForm(Client client, String data) {
         this.client = client;
         this.data = data;
     }
-
-    // Геттеры и сеттеры
     public Long getFormId() {
         return formId;
     }

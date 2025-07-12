@@ -7,8 +7,6 @@ public class CreditFormRequest {
     private double initialPayment;
     private double declaredIncome;
     private int employmentYears;
-
-    // Геттеры и сеттеры (обязательно!)
     public String getPassportNumber() {
         return passportNumber;
     }

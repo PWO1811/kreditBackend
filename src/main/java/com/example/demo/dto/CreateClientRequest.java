@@ -1,4 +1,4 @@
-// src/main/java/com/example/demo/dto/CreateClientRequest.java
+
 package com.example.demo.dto;
 
 import java.time.LocalDate;
@@ -7,10 +7,8 @@ public class CreateClientRequest {
     private String fullName;
     private String passportNumber;
     private LocalDate birthDate;
-    private Double income; // Добавляем доход для кредитного скоринга
-    private LocalDate employmentStartDate; // Добавляем доход для кредитного скоринга
-
-    // Геттеры и сеттеры
+    private Double income; 
+    private LocalDate employmentStartDate; 
     public String getFullName() { return fullName; }
     public void setFullName(String fullName) { this.fullName = fullName; }
     

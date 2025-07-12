@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface CreditFormRepository extends JpaRepository<CreditForm, Long> {
-    List<CreditForm> findByClientId(Long clientId);  // Найти все анкеты клиента
+    List<CreditForm> findByClientId(Long clientId);  
 }
